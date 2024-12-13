@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/skill.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Skill</title>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="nav-bar">
+            <i id="icon" class="far fa-address-card"></i>
+            <i id="menu-trigger" class="fas fa-bars"></i> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="popup-menu" id="popup-menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="skill">
+        <h1>Programming Skill</h1>
+        <div class="skill-container">
+            <li>
+                <h3>Html</h3>
+                <span class="bar"><span class="html"></span></span>
+            </li>
+            <li>
+                <h3>Css</h3>
+                <span class="bar"><span class="css"></span></span>
+            </li>
+            <li>
+                <h3>Javascript</h3>
+                <span class="bar"><span class="js"></span></span>
+            </li>
+            <li>
+                <h3>Python</h3>
+                <span class="bar"><span class="py"></span></span>
+            </li>
+            <li>
+                <h3>Php</h3>
+                <span class="bar"><span class="php"></span></span>
+            </li>
+            <li>
+                <h3>C++</h3>
+                <span class="bar"><span class="c"></span></span>
+            </li>
+            <li>
+                <h3>Java</h3>
+                <span class="bar"><span class="java"></span></span>
+            </li>
+        </div>
+        <br>
+        <!-- Framework Skill Section -->
+        <h1>Framework Skill</h1>
+        <div class="skill-container">
+            <li>
+                <h3>React</h3>
+                <span class="bar"><span class="react"></span></span>
+            </li>
+            <li>
+                <h3>Sequelize</h3>
+                <span class="bar"><span class="seque"></span></span>
+            </li>
+            <li>
+                <h3>Laravel</h3>
+                <span class="bar"><span class="laravel"></span></span>
+            </li>
+            <li>
+                <h3>REST API</h3>
+                <span class="bar"><span class="api"></span></span>
+            </li>
+            <li>
+                <h3>Express.js</h3>
+                <span class="bar"><span class="express"></span></span>
+            </li>
+            <li>
+                <h3>Angular</h3>
+                <span class="bar"><span class="angular"></span></span>
+            </li>
+            <li>
+                <h3>Bootstrap</h3>
+                <span class="bar"><span class="boots"></span></span>
+            </li>
+        </div>
+
+        <br>
+        <!-- Database Skill Section -->
+        <h1>Database Skill</h1>
+        <div class="skill-container">
+            <li>
+                <h3>MySQL</h3>
+                <span class="bar"><span class="sql"></span></span>
+            </li>
+            <li>
+                <h3>MongoDB</h3>
+                <span class="bar"><span class="mongo"></span></span>
+            </li>
+            <li>
+                <h3>PostgreSQL</h3>
+                <span class="bar"><span class="progre"></span></span>
+            </li>
+        </div>
+    </div>
+    
+  <script>
+    const menuTrigger = document.getElementById('menu-trigger');
+    const popupMenu = document.getElementById('popup-menu');
+
+    menuTrigger.addEventListener('click', () => {
+    if (popupMenu.style.display === 'flex') {
+        popupMenu.style.display = 'none';
+    } else {
+        popupMenu.style.display = 'flex';
+    }
+    });
+    </script>
+</body>
+</html>

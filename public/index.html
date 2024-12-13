@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+   
+    <div class="nav-container">
+        <nav class="nav-bar">
+            <i id="icon" class="far fa-address-card"></i>
+            <i id="menu-trigger" class="fas fa-bars"></i> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="popup-menu" id="popup-menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4><a href="/profile.html">Profile</a></h4>
+                            <p>Winter has so much to offer -
+                             creative activities</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2" >
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4><a href="/skill.html">Skill</a></h4>
+                            <p>Gets better every day -
+                             stay tuned</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3" >
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4><a href="/work.html">Workmanship</a></h4>
+                            <p>Help people all over the world</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4" >
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4><a href="/contact.html">Contact</a></h4>
+                            <p>Space engineering becomes
+                             more and more advanced</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        
+            const menuTrigger = document.getElementById('menu-trigger');
+            const popupMenu = document.getElementById('popup-menu');
+    menuTrigger.addEventListener('click', () => {
+    if (popupMenu.style.display === 'flex') {
+        popupMenu.style.display = 'none';
+    } else {
+        popupMenu.style.display = 'flex';
+    }
+    });
+    </script>
+</body>
+</html>

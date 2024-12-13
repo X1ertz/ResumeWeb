@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/work.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Workmanship</title>
+    <style>
+        @keyframes appear{
+            from{
+                opacity: 0;
+                scale: 0.5;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+            
+        }
+        @keyframes blur{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .document-item{
+            animation: appear 2s linear;
+        }
+        .content{
+            animation: blur 2s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="nav-bar">
+            <i id="icon" class="far fa-address-card"></i>
+            <i id="menu-trigger" class="fas fa-bars"></i> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="popup-menu" id="popup-menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Workmanship Section</h1>
+        <p>Thank you for visiting.</p>
+        
+        <section id="documents">
+            <h2>Available Projects</h2>
+            <div class="document-list">
+                <!-- Project 1 -->
+                <div class="document-item">
+                    <h3>Book Review Website</h3>
+                    <div class="slideshow-container">
+                        <img class="mySlides" src="/asset/image/All Books.png" alt="Image 1">
+                        <img class="mySlides" src="/asset/image/News.png" alt="Image 2">
+                        <img class="mySlides" src="/asset/image/Contact.png" alt="Image 3">
+                    </div>
+                    <p>This is a website for commenting and reviewing your favorite books using Node.js with a database.</p>
+                    <a href="https://github.com/X1ertz/Front-end-node-jspxx.git">View front-end source code</a> <br>
+                    <a href="https://github.com/X1ertz/back-end-node-jspxx.git">View back-end source code</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="document-item">
+                    <h3>Personal Diary Website</h3>
+                    <div class="slideshow-container">
+                        <img class="mySlides" src="/asset/image/Member.png" alt="Image 4">
+                        <img class="mySlides" src="/asset/image/Register.png" alt="Image 5">
+                        <img class="mySlides" src="/asset/image/Creatdiarry.png" alt="Image 6">
+                    </div>
+                    <p>This is a website to write personal diaries using PHP working with a local database.</p>
+                    <a href="https://github.com/X1ertz/Project-PHP.git">View source code</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="document-item">
+                    <h3>Game store website</h3>
+                    <div class="slideshow-container">
+                        <img class="mySlides" src="/asset/image/em1.jpg" alt="Image 7">
+                        <img class="mySlides" src="/asset/image/em2.jpg" alt="Image 8">
+                        <img class="mySlides" src="/asset/image/em3.jpg" alt="Image 9">
+                    </div>
+                    <p>This is website for merchant can manage anything in website have a role for different user using laravel and mysql .</p>
+                    <a href="https://github.com/Kittigan14/E-commerce.git">View source code</a>
+                </div>
+            </div>
+        
+        </section>
+        <br>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                This is a collection of some of the works I'd like to showcase, but there's so much more that's on the way.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2024 Resume Website. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Slideshow functionality for each set of images
+        let slideIndex1 = 0;
+        let slideIndex2 = 0;
+        let slideIndex3 = 0;
+
+        function showSlides1() {
+            let slides1 = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < 3; i++) {
+                slides1[i].style.display = "none";
+            }
+            slideIndex1++;
+            if (slideIndex1 > 3) {
+                slideIndex1 = 1;
+            }
+            slides1[slideIndex1 - 1].style.display = "block";
+            setTimeout(showSlides1, 2000); 
+        }
+
+        function showSlides2() {
+            let slides2 = document.getElementsByClassName("mySlides");
+            for (let i = 3; i < 6; i++) {
+                slides2[i].style.display = "none";
+            }
+            slideIndex2++;
+            if (slideIndex2 > 3) {
+                slideIndex2 = 1;
+            }
+            slides2[slideIndex2 + 2].style.display = "block";
+            setTimeout(showSlides2, 2000); 
+        }
+
+        function showSlides3() {
+            let slides3 = document.getElementsByClassName("mySlides");
+            for (let i = 6; i < 9; i++) {
+                slides3[i].style.display = "none";
+            }
+            slideIndex3++;
+            if (slideIndex3 > 3) {
+                slideIndex3 = 1;
+            }
+            slides3[slideIndex3 + 5].style.display = "block";
+            setTimeout(showSlides3, 2000);
+        }
+
+        showSlides1();
+        showSlides2();
+        showSlides3();
+
+        const menuTrigger = document.getElementById('menu-trigger');
+        const popupMenu = document.getElementById('popup-menu');
+
+        menuTrigger.addEventListener('click', () => {
+        if (popupMenu.style.display === 'flex') {
+            popupMenu.style.display = 'none';
+        } else {
+            popupMenu.style.display = 'flex';
+        }
+        });
+    </script>
+</body>
+</html>

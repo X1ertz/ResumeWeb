@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-container">
+        <nav class="nav-bar">
+            <i id="icon" class="far fa-address-card"></i>
+            <i id="menu-trigger" class="fas fa-bars"></i> <!-- Hamburger Icon -->
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="popup-menu" id="popup-menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="/skill.html">Skill</a></li>
+                <li><a href="/work.html">Workmanship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="cube">
+        <div class="top"></div>
+        <div>
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+    </div>
+    <div class="centered-text">
+        <h1>
+            <a href="#" target="_blank" id="icon-link">
+                <i id="loop-icon"></i>
+            </a>
+        </h1>
+
+        <h2 id="loop-text"></h2>
+    </div>
+    
+    
+</body>
+<script>
+const messages = ["Aungkoon Pienkaew", "X1ertz","brz133380xx@gmail.com"];
+let index = 0;
+
+function loopText() {
+    const textElement = document.getElementById("loop-text");
+    textElement.textContent = messages[index];
+    index = (index + 1) % messages.length; 
+}
+
+setInterval(loopText, 3000);
+
+const icons = [
+    { class: "fab fa-facebook", link: "https://www.facebook.com" },
+    { class: "fab fa-instagram", link: "https://www.instagram.com" },
+    { class: "fas fa-envelope", link: "mailto:brz133380xx@gmail.com" },
+];
+
+let currentIndex = 0;
+
+function loopIcons() {
+    const iconElement = document.getElementById("loop-icon");
+    const linkElement = document.getElementById("icon-link");
+
+    iconElement.className = icons[currentIndex].class;
+
+    linkElement.href = icons[currentIndex].link;
+
+    currentIndex = (currentIndex + 1) % icons.length;
+}
+
+setInterval(loopIcons, 3000);
+const menuTrigger = document.getElementById('menu-trigger');
+const popupMenu = document.getElementById('popup-menu');
+
+menuTrigger.addEventListener('click', () => {
+    if (popupMenu.style.display === 'flex') {
+        popupMenu.style.display = 'none';
+    } else {
+        popupMenu.style.display = 'flex';
+    }
+});
+
+</script>
+</html>
